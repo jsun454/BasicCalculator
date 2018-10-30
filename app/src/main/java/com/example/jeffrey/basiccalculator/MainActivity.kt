@@ -3,6 +3,7 @@ package com.example.jeffrey.basiccalculator
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.CardView
+import android.util.Log
 import android.widget.GridLayout
 import kotlinx.android.synthetic.main.content_main.*
 //import java.math.BigDecimal
@@ -146,6 +147,8 @@ class MainActivity : AppCompatActivity() {
         }
         if(num1 == "-$INFINITY_MESSAGE") {
             num1 = INFINITY_MESSAGE
+        } else if(num1 == "-0") {
+            num1 = "0"
         }
         num2 = ""
         if(pressedEquals) {
